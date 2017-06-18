@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/thegazelle-ad/slack-deployment-bot/issues"
   },
-  "homepage": "https://github.com/thegazelle-ad/slack-deployment-bot#readme"
+  "homepage": "https://github.com/thegazelle-ad/slack-deployment-bot#readme",
+  "dependencies": {
+    "@slack/client": "^3.10.0"
+  }
 }
