@@ -14,5 +14,6 @@ web.chat.postMessage('summer-17', message, {as_user: true}, function (err, res) 
     const fd = fs.openSync('slack-bot-errors.log', 'a');
     fs.writeSync(fd, new Date().toString() + ": " + err.toString() + "\n");
     fs.closeSync(fd);
+    process.exit(1);
   }
 });
