@@ -1,14 +1,18 @@
 'use strict';
 
+const fs = require('fs');
+
 const WebClient = require('@slack/client').WebClient;
 
 const token = require('./config.js').apiToken;
 
+const message = process.argv[2];
+
 const web = new WebClient(token);
-web.chat.postMessage('summer-2017', "Hi guys, this is just Emil doing a test!", {as_user: true}, function (err, res) {
+web.chat.postMessage('summer-17', message, {as_user: true}, function (err, res) {
   if (err) {
-    console.error(err);
-  } else {
-    console.log('Message sent:', res);
+    const fd = fs.openSync('slack-bot-errors.log', 'a');
+    fs.writeSync(fd, new Date().toString() + ": " + err.toString() + "\n");
+    fs.closeSync(fd);
   }
 });
