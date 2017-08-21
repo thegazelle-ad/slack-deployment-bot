@@ -9,7 +9,7 @@ const token = require('./config.js').apiToken;
 const message = process.argv[2];
 
 const web = new WebClient(token);
-web.chat.postMessage('summer-2017', message, {as_user: true}, function (err, res) {
+web.chat.postMessage('deployment', message, {as_user: true}, function (err, res) {
   if (err) {
     const fd = fs.openSync('slack-bot-errors.log', 'a');
     fs.writeSync(fd, new Date().toString() + ": " + err.toString() + "\n");
