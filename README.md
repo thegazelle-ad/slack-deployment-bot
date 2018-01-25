@@ -4,7 +4,13 @@ This is a simple script that posts to the `deployment` channel of the Slack chan
 
 ## Setup
 
-First copy the example config to create the actual config
+First install the dependencies
+
+```
+npm install
+```
+
+Then copy the example config to create the actual config
 
 `cp config.example.js config.js`
 
