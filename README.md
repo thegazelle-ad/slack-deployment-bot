@@ -1,6 +1,6 @@
 # Slack Deployment Bot
 
-This is a simple script that posts to the `deployment` channel of the Slack channel the bot is associated with (this bot is only intended to be used with The Gazelle, so hasn't been made further customizeable)
+This is a simple script that posts to the any channel of the Slack team the bot is associated with (this bot is only intended to be used with The Gazelle, so hasn't been made further customizeable)
 
 ## Setup
 
@@ -31,6 +31,8 @@ to post to the default `deployment` channel, or
 ```bash
 node index.js <channel_to_send_to> "Some message to post to the Slack team"
 ```
+
+to post to a custom channel such as `error-logging`
 
 ## License
 MIT Licensed Copyright (c) 2018 Emil Goldsmith Olesen
