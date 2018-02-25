@@ -34,5 +34,7 @@ node index.js <channel_to_send_to> "Some message to post to the Slack team"
 
 to post to a custom channel such as `error-logging`
 
+> NOTE: Remember that your bot must have been added to any channel you post to
+
 ## License
 MIT Licensed Copyright (c) 2018 Emil Goldsmith Olesen
